@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule, MatCard, MatCardModule} from '@angular/material';
 import { MatCheckboxModule} from '@angular/material/checkbox'
 
 
@@ -28,6 +28,7 @@ import { ConnectorsDetailsComponent } from './connectors/connectors-details/conn
     MatSidenavModule,
     MatCheckboxModule,
     MatToolbarModule,
+    MatCardModule
     
   ],
   providers: [],

@@ -1,2 +1,13 @@
-<h3 class="mat-h3">connectors-list works!</h3>
-  
+<h3 class="mat-h3">connectors-list works!    asd</h3>
+  <div class="row">
+      <mat-card *ngFor="let connector of connectors">
+          <mat-card-header>
+              <div mat-card-avatar>
+                <mat-card-title>
+                    <a mat-button reouterLink="." >{{connector.connectorName}}</a>
+                </mat-card-title>
+                
+              </div>
+          </mat-card-header>
+      </mat-card>
+  </div>
