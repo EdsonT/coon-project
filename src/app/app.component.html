@@ -8,7 +8,7 @@
           </button>
      </div>
      <div>
-        <button mat-icon-button>
+        <button mat-icon-button (click)="drawer.toggle()">
             <mat-icon>device_hub</mat-icon>
           </button>
      </div>
@@ -21,15 +21,14 @@
           <mat-icon>exit_to_app</mat-icon>
         </button>
    </div>
-   
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-sidenav-container class="second-container">
-      <mat-sidenav mode="side" opened class="second-sidenav">
+      <mat-sidenav mode="side" opened class="second-sidenav" #drawer >
        <!-- Second sidenav -->
        <app-connectors-list ></app-connectors-list>
       </mat-sidenav>
-      <mat-sidenav-content>
+      <mat-sidenav-content class="last-container">
         <!-- Content sidenav -->
           <app-connectors-details></app-connectors-details>
       </mat-sidenav-content>

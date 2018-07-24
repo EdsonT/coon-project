@@ -18,16 +18,21 @@
   
   .second-container {
     display: flex;
-    height: 100%;
+    height: 100%; 
     align-items: center;
 
     /* background-color: #F4F5F7; */
+  }
+  .last-container{
+    width: 100%;
+    height: 100%;
   }
   .second-sidenav {
     display: flex;
     /* align-items: center;
     justify-content: center; */
     /* width: 20px; */
+    /* width: 30%; */
     background-color: #F4F5F7;
 
   }

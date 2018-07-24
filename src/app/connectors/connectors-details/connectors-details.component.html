@@ -1,3 +1,26 @@
-<section class="mat-typography">
-    <p>This header will be styled</p>
-  </section>
+
+<div class="form-container">
+    <section class="mat-typography">
+        <h2>Connector Detail</h2>
+    </section>
+  <mat-form-field>
+      <input matInput placeholder="Connector Name" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Method" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="URI">
+  </mat-form-field>
+  <div class="row">
+    <button mat-raised-button color="primary">
+      Save
+    </button>
+    <button mat-raised-button color="warn">
+     Cancel
+    </button>
+    <button mat-raised-button>
+     Test  
+    </button>
+  </div>
+</div>
