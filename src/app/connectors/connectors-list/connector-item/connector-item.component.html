@@ -1,0 +1,15 @@
+<mat-card >
+  <mat-card-header>
+        <img mat-card-avatar src="{{connectorItem.logo}}">
+       <mat-card-title>
+            <a mat-button reouterLink="." (click)="onItemSelected()">{{connectorItem.connectorName}}</a>
+        </mat-card-title>
+        <mat-card-subtitle>
+           {{connectorItem.method}}
+        </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+      <p>{{connectorItem.description}}</p>
+      <p>{{connectorItem.uri}}</p>
+  </mat-card-content>
+</mat-card>

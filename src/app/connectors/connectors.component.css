@@ -1,0 +1,51 @@
+.main-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   
+  }
+  
+  .first-sidenav {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    /* width: 20px; */
+    background-color: #3F51B5;
+    color: white;
+  }
+  
+  .second-container {
+    display: flex;
+    height: 100%; 
+    align-items: center;
+
+    /* background-color: #F4F5F7; */
+  }
+  .last-container{
+    width: 100%;
+    height: 100%;
+  }
+  .second-sidenav {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    /* width: 20px; */
+    /* width: 30%; */
+    background-color: #F4F5F7;
+
+  }
+  .example-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+.top-options{
+    position: relative;
+}
+  .bottom-options{
+      position: absolute;
+     bottom: 0;
+  }

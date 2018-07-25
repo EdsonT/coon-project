@@ -10,13 +10,15 @@ import { FormsModule } from '../../node_modules/@angular/forms';
 import { ConnectorsComponent } from './connectors/connectors.component';
 import { ConnectorsListComponent } from './connectors/connectors-list/connectors-list.component';
 import { ConnectorsDetailsComponent } from './connectors/connectors-details/connectors-details.component';
+import { ConnectorItemComponent } from './connectors/connectors-list/connector-item/connector-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConnectorsComponent,
     ConnectorsListComponent,
-    ConnectorsDetailsComponent
+    ConnectorsDetailsComponent,
+    ConnectorItemComponent
   ],
   imports: [
     BrowserModule,

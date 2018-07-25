@@ -1,26 +1,34 @@
-
-<div class="form-container">
-    <section class="mat-typography">
-        <h2>Connector Detail</h2>
-    </section>
-  <mat-form-field>
-      <input matInput placeholder="Connector Name" required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Method" required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="URI">
-  </mat-form-field>
-  <div class="row">
-    <button mat-raised-button color="primary">
-      Save
-    </button>
-    <button mat-raised-button color="warn">
-     Cancel
-    </button>
-    <button mat-raised-button>
-     Test  
-    </button>
-  </div>
-</div>
+  <form *ngIf="connectorDetails">
+      <div class="form-container">
+      <section class="mat-typography">
+          <h2>Connector Detail</h2>
+      </section>
+      
+      <img mat-card-avatar src="{{connectorDetails.logo}}">
+      <hr>
+    <mat-form-field>
+        <input matInput placeholder="Connector Name" value="{{connectorDetails.connectorName}}" disabled required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Method" value="{{connectorDetails.method}}" disabled required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="URI" value="{{connectorDetails.uri}}" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Description" value="{{connectorDetails.description}}" disabled>
+    </mat-form-field>
+    <div class="row">
+      <button mat-raised-button color="primary" disabled>
+        Save
+      </button>
+      <button mat-raised-button color="warn" disabled>
+      Cancel
+      </button>
+      <button mat-raised-button disabled>
+      Test  
+      </button>
+    </div>
+    <p></p>
+    </div>
+</form>
