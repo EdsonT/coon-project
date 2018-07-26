@@ -14,3 +14,15 @@
   mat-grid-tile {
     background: lightblue;
   }
+
+  .form-width {
+    background: lightblue;
+    min-width: 150px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .full-width{
+    background: transparent;
+    width: 100%;
+  }
