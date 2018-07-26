@@ -1,9 +1,14 @@
 <h2 class="mat-h2">Connectors list:</h2>
-  <div class="row">
 
+    <mat-card style="align-content: center">
+        <button mat-raised-button color="primary">
+            New Connector
+            <mat-icon>add</mat-icon>
+        </button>
+    </mat-card>
       <app-connector-item 
       *ngFor="let connector of connectors"
       [connectorItem]='connector'
       (selectedItem)="onConnectorListSelected(connector)"
       ></app-connector-item>
-  </div>
+  

@@ -11,3 +11,6 @@
   .form-container > * {
     width: 100%;
   } */
+  mat-grid-tile {
+    background: lightblue;
+  }
