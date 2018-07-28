@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Connector } from '../connectors.model';
+import { Connectors } from '../../Models/connectors.model';
 import { CONNECTORS } from '../../SampleData/mock-connectors';
+import { ConnectorsServices } from '../../Services/connectors.service';
 
 
 @Component({
@@ -10,14 +11,10 @@ import { CONNECTORS } from '../../SampleData/mock-connectors';
 })
 export class ConnectorsListComponent implements OnInit {
 
-  connectors=CONNECTORS;
-  @Output() listSelected=new EventEmitter<Connector>();
-  constructor() { }
-
+  connectors:Connectors[];
+  constructor(private connServices:ConnectorsServices) { }
   ngOnInit() {
+    this.connectors=this.connServices.getConnectors();
   }
-  onConnectorListSelected(selectedConnector:Connector){
-    this.listSelected.emit(selectedConnector);
-    // console.log(selectedConnector);
-  }
+ 
 }

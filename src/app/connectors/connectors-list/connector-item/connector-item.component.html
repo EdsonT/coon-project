@@ -2,7 +2,7 @@
   <mat-card-header>
         <img mat-card-avatar src="{{connectorItem.logo}}">
        <mat-card-title>
-            <a mat-button reouterLink="." (click)="onItemSelected()">{{connectorItem.name}}</a>
+            <a mat-button routerLink="./connectors" (click)="onItemSelected()">{{connectorItem.name}}</a>
         </mat-card-title>
         <mat-card-subtitle>
            {{connectorItem.method}}

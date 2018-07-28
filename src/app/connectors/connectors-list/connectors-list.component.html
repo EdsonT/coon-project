@@ -1,14 +1,13 @@
 <h2 class="mat-h2">Connectors list:</h2>
-
-    <mat-card style="align-content: center">
-        <button mat-raised-button color="primary">
-            New Connector
-            <mat-icon>add</mat-icon>
-        </button>
-    </mat-card>
+<a routerLink="./connectors">Link</a>
+<div style="align-content:center;padding-left: 20%;padding-bottom:20px">
+    <button mat-raised-button color="primary">
+        New Connector
+        <mat-icon>add</mat-icon>
+    </button>
+</div>  
       <app-connector-item 
-      *ngFor="let connector of connectors"
+      *ngFor="let connector of connectors;let i=index"
       [connectorItem]='connector'
-      (selectedItem)="onConnectorListSelected(connector)"
       ></app-connector-item>
   

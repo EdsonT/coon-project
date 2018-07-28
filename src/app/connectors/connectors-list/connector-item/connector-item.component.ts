@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Connector } from '../../connectors.model';
+import { Connectors } from '../../../Models/connectors.model';
+import { ConnectorsServices } from '../../../Services/connectors.service';
+
 
 @Component({
   selector: 'app-connector-item',
@@ -7,15 +9,14 @@ import { Connector } from '../../connectors.model';
   styleUrls: ['./connector-item.component.css']
 })
 export class ConnectorItemComponent implements OnInit {
-  @Input() connectorItem: Connector;
-  @Output() selectedItem = new EventEmitter<void>();
-  constructor() { }
+  @Input() connectorItem: Connectors;
+  constructor(private connService:ConnectorsServices) { }
 
   ngOnInit() {
   }
   onItemSelected(){
-    this.selectedItem.emit();
-    // console.log(this.selectedItem);
+    this.connService.itemSelected.emit(this.connectorItem);
+    console.log(this.connectorItem);
   }
 
 }

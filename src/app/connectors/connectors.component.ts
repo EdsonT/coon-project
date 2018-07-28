@@ -1,20 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { Connector } from './connectors.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { ConnectorsServices } from '../Services/connectors.service';
+import { Connectors } from '../Models/connectors.model';
 
 @Component({
   selector: 'app-connectors',
   templateUrl: './connectors.component.html',
-  styleUrls: ['./connectors.component.css']
+  styleUrls: ['./connectors.component.css'],
+  providers:[ConnectorsServices]
 })
 export class ConnectorsComponent implements OnInit {
-  connectorSelected:Connector;
-  constructor() { }
+  selectedConnector:Connectors;
+  @Input() menuOption:string;
+  constructor(private connService:ConnectorsServices) { }
 
   ngOnInit() {
+    this.connService.itemSelected.subscribe(
+      (connector:Connectors)=>{
+        this.selectedConnector=connector;
+      }
+
+    )
+    console.log(this.selectedConnector);
   }
-  onConnectorsSelected(obtained:Connector){
-    this.connectorSelected=obtained;
-    // console.log(obtained);
-  }
+  // onConnectorsSelected(obtained:Connectors){
+  //   this.connectorSelected=obtained;
+  //   // console.log(obtained);
+  // }
 
 }
